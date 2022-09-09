@@ -1,4 +1,5 @@
 ﻿using Microsoft.UI.Xaml;
+using WinUIEx;
 
 namespace About
 {
@@ -14,6 +15,7 @@ namespace About
         {
             m_window = new MainWindow();
             m_window.Activate();
+            m_window.CenterOnScreen();
         }
 
         private Window m_window;

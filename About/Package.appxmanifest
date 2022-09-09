@@ -4,22 +4,23 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="dd0bc16f-c3a4-475f-8cff-d9545873b0bd"
-    Publisher="CN=VOLKANOGEDAY"
-    Version="1.0.0.0" />
+    Name="42063VOLKANOGEDAY.FluentAbout"
+    Publisher="CN=968DF8E5-7085-45D5-B8D9-0F8ED93008CA"
+    Version="1.0.1.0" />
 
   <Properties>
-    <DisplayName>About</DisplayName>
+    <DisplayName>FluentAbout</DisplayName>
     <PublisherDisplayName>VOLKANOGEDAY</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
-    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.22000.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.22000.0" />
   </Dependencies>
 
   <Resources>
@@ -32,7 +33,7 @@
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
         DisplayName="About"
-        Description="About"
+        Description="About is improved and fluent version of Windows&apos; classic winver dialog."
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">

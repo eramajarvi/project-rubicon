@@ -1,16 +1,12 @@
-﻿using Microsoft.UI;
+﻿using Microsoft.Win32;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
-using WinUIEx;
 using Microsoft.UI.Xaml.Media.Imaging;
-using Microsoft.Win32;
 using System;
 using System.Management;
 using System.Text.RegularExpressions;
 using Windows.System.Profile;
 using Windows.Security.ExchangeActiveSyncProvisioning;
-
-
 
 namespace About
 {
@@ -43,10 +39,10 @@ namespace About
             Wallpaper.Source = new BitmapImage(new Uri(Path));
 
             //device
-            DeviceName.Text = (Environment.MachineName);
-
             var DeviceInformation = new EasClientDeviceInformation();
             var SystemInfoKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation");
+
+            DeviceName.Text = (DeviceInformation.FriendlyName);
 
             if (SystemInfoKey.GetValue("Manufacturer", null) == null)
             {
@@ -138,20 +134,6 @@ namespace About
                     GPU.Text = Graphics;
                 }
 
-            }
-
-            //windows 10 backdrop
-            AcrylicSystemBackdrop AcrylicBackdrop = new AcrylicSystemBackdrop()
-            {
-                LightFallbackColor = ColorHelper.FromArgb(255, 255, 255, 255),
-                DarkFallbackColor = ColorHelper.FromArgb(255, 0, 0, 0),
-                LightTintColor = ColorHelper.FromArgb(255, 255, 255, 255),
-                DarkTintColor = ColorHelper.FromArgb(255, 0, 0, 0)
-            };
-
-            if (Build < 21996)
-            {
-                this.Backdrop = AcrylicBackdrop;
             }
 
         }

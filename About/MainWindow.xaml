@@ -1,4 +1,6 @@
 ﻿<windowex:WindowEx
+    Title="About"
+    TaskBarIcon="Assets/icon.ico"
     Width="472" Height="496"
     MinWidth="472" MinHeight="496"
     x:Class="About.MainWindow"
@@ -38,7 +40,7 @@
                         <Image x:Name="Wallpaper" Width="144" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
 
-                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <StackPanel VerticalAlignment="Center">
                         <TextBlock x:Name="DeviceName" FontSize="20" FontWeight="Bold"/>
                         <TextBlock x:Name="DeviceModel" FontSize="16" FontWeight="SemiBold"/>
                         <TextBlock x:Name="DeviceManufacturer" FontSize="14" FontWeight="SemiBold"/>
