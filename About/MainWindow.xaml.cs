@@ -36,7 +36,7 @@ namespace About
             string Path = UserFolder + "\\Microsoft\\Windows\\Themes\\TranscodedWallpaper";
             float Ratio = DisplayWidth / 144;
             Frame.Height = DisplayHeight / Ratio;
-            Wallpaper.Source = new BitmapImage(new Uri(Path));
+            Wallpaper.ImageSource = new BitmapImage(new Uri(Path));
 
             //device
             var DeviceInformation = new EasClientDeviceInformation();

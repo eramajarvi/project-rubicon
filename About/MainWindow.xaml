@@ -1,5 +1,5 @@
 ﻿<windowex:WindowEx
-    Title="About"
+    x:Uid="Title"
     TaskBarIcon="Assets/icon.ico"
     Width="472" Height="496"
     MinWidth="472" MinHeight="496"
@@ -26,7 +26,7 @@
             VerticalAlignment="Top">
             
             <Image Source="Assets/Square44x44Logo.png" Width="24" Margin="6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock FontSize="12" Margin="36,0,0,0" VerticalAlignment="Center" Text="About"/>
+            <TextBlock FontSize="12" Margin="36,0,0,0" VerticalAlignment="Center" x:Uid="AppTitle"/>
             
         </Grid>
 
@@ -36,9 +36,11 @@
 
                 <StackPanel Margin="0,0,0,-36" Orientation="Horizontal">
 
-                    <Grid x:Name="Frame" BorderBrush="Black" BorderThickness="4" CornerRadius="4" Margin="16" VerticalAlignment="Center">
-                        <Image x:Name="Wallpaper" Width="144" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Grid>
+                    <Border x:Name="Frame" BorderBrush="Black" BorderThickness="4" CornerRadius="4" Width="144" Margin="16" VerticalAlignment="Center">
+                        <Border.Background>
+                            <ImageBrush x:Name="Wallpaper" Stretch="UniformToFill"/>
+                        </Border.Background>
+                    </Border>
 
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock x:Name="DeviceName" FontSize="20" FontWeight="Bold"/>
@@ -57,7 +59,7 @@
                             
                             <controls:Setting
                                 Style="{StaticResource ExpanderHeaderSettingStyle}"
-                                Header="System Properties"
+                                x:Uid="SystemProperties"
                                 Icon="&#xe950;"/>
                             
                         </controls:SettingExpander.Header>
@@ -66,27 +68,27 @@
                             <StackPanel Padding="16" Spacing="12">
                                 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Processor:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Processor"/>
                                     <TextBlock x:Name="CPU" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Memory:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Memory"/>
                                     <TextBlock x:Name="RAM" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Storage:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Storage"/>
                                     <TextBlock x:Name="Disk" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Graphics:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Graphics"/>
                                     <TextBlock x:Name="GPU" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Display:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Display"/>
                                     <TextBlock x:Name="Screen" TextAlignment="Right"/>
                                 </Grid>
                                 
@@ -101,7 +103,7 @@
                             
                             <controls:Setting
                                 Style="{StaticResource ExpanderHeaderSettingStyle}"
-                                Header="About Windows"
+                                x:Uid="AboutWindows"
                                 Icon="&#xe946;"/>
                             
                         </controls:SettingExpander.Header>
@@ -110,17 +112,17 @@
                             <StackPanel Padding="16" Spacing="12">
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Edition:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}"  x:Uid="Edition"/>
                                     <TextBlock x:Name="WindowsEdition" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Version:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Version"/>
                                     <TextBlock x:Name="WindowsVersion" TextAlignment="Right"/>
                                 </Grid>
 
                                 <Grid>
-                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" Text="Build:"/>
+                                    <TextBlock Foreground="{ThemeResource TextFillColorSecondary}" x:Uid="Build"/>
                                     <TextBlock x:Name="WindowsRevision" TextAlignment="Right"/>
                                 </Grid>
 
@@ -137,7 +139,7 @@
                     Margin="0,12,0,0"
                     HorizontalAlignment="Right"
                     Click="Update_Click"
-                    Content="Windows Update"/>
+                    x:Uid="WindowsUpdate"/>
 
             </StackPanel>
         </ScrollViewer>
