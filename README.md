@@ -2,4 +2,9 @@
 About is improved and fluent version of Windows' classic winver dialog. List your system information in a more pleasing way.
 
 ## Screenshots
-![Group 2](https://user-images.githubusercontent.com/111060829/188286802-7c97e1a1-98c7-4534-abd5-a7e0c6a82a5b.png)  
+![Screenshots](https://user-images.githubusercontent.com/111060829/201487273-24c7d718-ee87-4837-8b8f-b4a18c6de922.png) 
+
+## Translation
+If you want to help the translation of the project, you can download the document below and send it to me via email after filling in all the blanks.  
+  
+[Translation Document.docx](https://github.com/VOLKANOGEDAY/FluentAbout/files/9994823/Translation.Document.docx)
