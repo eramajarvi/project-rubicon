@@ -101,17 +101,18 @@ namespace About
             }
 
             //storage
-            var StorageInfo = new ManagementObjectSearcher(@"select * from Win32_DiskDrive");
+            System.IO.DriveInfo[] drives = System.IO.DriveInfo.GetDrives();
             string Storage = String.Empty;
 
-            foreach (ManagementObject Result in StorageInfo.Get())
+            foreach (System.IO.DriveInfo drive in drives)
             {
-                if ((String)Result["DeviceID"] == "\\\\.\\PHYSICALDRIVE0")
+                if (drive.RootDirectory.ToString() == "C:\\")
                 {
-                    Storage = Result["Size"].ToString();
+                    Storage = drive.TotalSize.ToString();
                     float StorageInKB = Int64.Parse(Storage);
                     double StorageInGB = StorageInKB / 1073741824;
                     Disk.Text = StorageInGB.ToString("F1") + " GB";
+                    break;
                 }
             }
 
