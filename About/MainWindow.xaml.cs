@@ -112,7 +112,6 @@ namespace About
                     float StorageInKB = Int64.Parse(Storage);
                     double StorageInGB = StorageInKB / 1073741824;
                     Disk.Text = StorageInGB.ToString("F1") + " GB";
-                    break;
                 }
             }
 
