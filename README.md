@@ -8,3 +8,6 @@ About is improved and fluent version of Windows' classic winver dialog. List you
 If you want to help the translation of the project, you can download the document below and send it to me via email after filling in all the blanks.  
   
 [Translation Document.docx](https://github.com/VOLKANOGEDAY/FluentAbout/files/9994823/Translation.Document.docx)
+
+## Notice
+The app is now discontinued and it won't get any further updates (at least for a very long time). I switched to linux.
